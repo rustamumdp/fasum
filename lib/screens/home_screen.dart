@@ -17,7 +17,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Beranda'),
+        title: const Text('Beranda Barbershop Palembang'),
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         actions: [
           IconButton(
@@ -67,6 +67,10 @@ class HomeScreen extends StatelessWidget {
                           width: double.infinity,
                           height: double.infinity,
                         ),
+                      )
+                    else
+                      Expanded(
+                        child: Center(child: Text('Gambar tidak tersedia')),
                       ),
                     Padding(
                       padding: const EdgeInsets.all(4.0),
@@ -84,7 +88,7 @@ class HomeScreen extends StatelessWidget {
                           Text(
                             formattedDate,
                             style: TextStyle(
-                              color: Colors.grey,
+                              color: Colors.greenAccent,
                               fontSize: 10,
                             ),
                           ),
